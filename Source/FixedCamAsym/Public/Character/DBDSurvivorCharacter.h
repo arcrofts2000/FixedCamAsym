@@ -14,6 +14,15 @@ class FIXEDCAMASYM_API ADBDSurvivorCharacter : public ADBDBaseCharacter
 {
 	GENERATED_BODY()
 	
+public:
+	ADBDSurvivorCharacter();
+
 protected:
 	virtual void BeginPlay() override;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Sockets")
+	FName RightHandSocket;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Sockets")
+	FName LeftHandSocket;
 };
